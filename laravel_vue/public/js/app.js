@@ -5372,6 +5372,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "PostComponent",
+  data: function data() {
+    return {
+      name: 'Victor',
+      age: 20,
+      "boolean": false,
+      someNull: null,
+      arr: [[]],
+      someObj: {
+        personName: 'Ivan'
+      }
+    };
+  },
   components: {
     SinglePostComponent: _SinglePostComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -5412,7 +5424,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("SinglePostComponent")], 1);
+  return _c("div", [_c("SinglePostComponent"), _vm._v(" "), _c("div", [_vm._v("Name " + _vm._s(_vm.name))]), _vm._v(" "), _c("div", [_vm._v("Age " + _vm._s(_vm.age))])], 1);
 };
 
 var staticRenderFns = [];
