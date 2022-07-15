@@ -5389,11 +5389,29 @@ __webpack_require__.r(__webpack_exports__);
         name: 'Petr',
         age: 34,
         job: 'seller'
+      }, {
+        id: 4,
+        name: 'Ksenia',
+        age: 32,
+        job: 'traveller'
+      }, {
+        id: 5,
+        name: 'John',
+        age: 29,
+        job: 'teacher'
       }]
     };
   },
   methods: {},
-  computed: {},
+  computed: {
+    olderPersons: function olderPersons() {
+      return this.persons.filter(function (person) {
+        return person.age > 20; // if (person.age > 20) {
+        //     return person
+        // }
+      });
+    }
+  },
   components: {
     SinglePostComponent: _SinglePostComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -5437,6 +5455,14 @@ var render = function render() {
   return _c("div", [_c("SinglePostComponent"), _vm._v(" "), _c("table", {
     staticClass: "table"
   }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.persons, function (person) {
+    return person.age > 20 ? _c("tr", [_c("th", {
+      attrs: {
+        scope: "row"
+      }
+    }, [_vm._v(_vm._s(person.id))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(person.name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(person.age))]), _vm._v(" "), _c("td", [_vm._v("@" + _vm._s(person.job))])]) : _vm._e();
+  }), 0)]), _vm._v(" "), _c("h5", [_vm._v("Another table")]), _vm._v(" "), _c("table", {
+    staticClass: "table"
+  }, [_vm._m(1), _vm._v(" "), _c("tbody", _vm._l(_vm.olderPersons, function (person) {
     return _c("tr", [_c("th", {
       attrs: {
         scope: "row"
@@ -5446,6 +5472,27 @@ var render = function render() {
 };
 
 var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("thead", [_c("tr", [_c("th", {
+    attrs: {
+      scope: "col"
+    }
+  }, [_vm._v("#")]), _vm._v(" "), _c("th", {
+    attrs: {
+      scope: "col"
+    }
+  }, [_vm._v("Name")]), _vm._v(" "), _c("th", {
+    attrs: {
+      scope: "col"
+    }
+  }, [_vm._v("Age")]), _vm._v(" "), _c("th", {
+    attrs: {
+      scope: "col"
+    }
+  }, [_vm._v("Job")])])]);
+}, function () {
   var _vm = this,
       _c = _vm._self._c;
 
