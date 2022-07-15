@@ -1,8 +1,9 @@
 <template>
     <div>
         <SinglePostComponent></SinglePostComponent>
-        <div>Name {{ name }}</div>
-        <div>Age {{ age }}</div>
+        <div>Name: {{ name }}</div>
+        <div>Age: {{ age }}</div>
+        <div>Job: {{ vasyaJob }}</div>
         <button @click="sayHello">Hello</button>
         <button @click="sayHi">Hi</button>
     </div>
@@ -28,6 +29,12 @@ export default {
             console.log('hi')
         }
     },
+
+    computed: {
+        vasyaJob() {
+            return this.name + ' works in a bakery'
+        }
+    }, // works after init, getter analog in var
 
     components: {
         SinglePostComponent
