@@ -13,10 +13,12 @@
             <!-- prevent - disable default scripts for html tags -->
             <input @click.prevent="addPerson" class="btn btn-primary" value="Добавить">
         </div>
+        <SomeComponent></SomeComponent>
     </div>
 </template>
 
 <script>
+import SomeComponent from "./SomeComponent";
 export default {
     name: "CreateComponent",
 
@@ -26,6 +28,10 @@ export default {
             age: null,
             job: null,
         }
+    },
+
+    mounted() {
+
     },
 
     methods: {
@@ -39,6 +45,10 @@ export default {
                 console.log(res);
             })
         }
+    },
+
+    components: {
+        SomeComponent
     }
 }
 </script>
