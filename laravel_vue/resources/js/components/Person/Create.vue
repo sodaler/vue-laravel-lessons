@@ -32,7 +32,7 @@ export default {
 
     methods: {
         store() {
-            axios.post('/api/people', { name: this.name, age: this.age, job: this.job, })
+            axios.post('/api/people', { name: this.name, age: this.age, job: this.job })
             .then(res => {
                 router.push({ name: 'person.index'})
             })
