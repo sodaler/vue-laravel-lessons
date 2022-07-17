@@ -13,7 +13,7 @@
             <!-- prevent - disable default scripts for html tags -->
             <input @click.prevent="addPerson" class="btn btn-primary" value="Добавить">
         </div>
-        <SomeComponent></SomeComponent>
+        <SomeComponent :obj="obj"></SomeComponent>
     </div>
 </template>
 
@@ -27,6 +27,11 @@ export default {
             name: null,
             age: null,
             job: null,
+            obj: {
+                color: 'yellow',
+                number: 50,
+                isPublished: false
+            }
         }
     },
 
