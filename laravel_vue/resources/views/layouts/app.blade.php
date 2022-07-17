@@ -21,9 +21,7 @@
 </head>
 <body>
     <div id="app" class="p-5">
-        <post-component></post-component>
+        @yield('content')
     </div>
 </body>
 </html>
-<script>
-</script>
