@@ -11,6 +11,10 @@ export default new VueRouter({
             // dynamic conn
             path: '/people', component: () => import('./components/Person/Index'),
             name: 'person.index'
+        },
+        {
+            path: '/people/create', component: () => import('./components/Person/Create'),
+            name: 'person.create'
         }
     ]
 })
