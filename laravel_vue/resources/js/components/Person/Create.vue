@@ -28,6 +28,10 @@ export default {
         }
     },
 
+    beforeDestroy() {
+        this.someLog()
+    },
+
     methods: {
         store() {
             axios.post('/api/people', { name: this.name, age: this.age, job: this.job })
@@ -35,6 +39,10 @@ export default {
                 this.$router.push({ name: 'person.index'})
             })
         },
+
+        someLog() {
+            console.log(11111);
+        }
     },
 
     computed: {
