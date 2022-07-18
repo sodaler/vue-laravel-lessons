@@ -52,7 +52,16 @@ var render = function render() {
   return _c("div", [_c("table", {
     staticClass: "table"
   }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.people, function (person) {
-    return _c("tr", [_c("td", [_vm._v(_vm._s(person.name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(person.age))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(person.job))])]);
+    return _c("tr", [_c("td", [_vm._v(_vm._s(person.name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(person.age))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(person.job))]), _vm._v(" "), _c("td", [_c("router-link", {
+      attrs: {
+        to: {
+          name: "person.edit",
+          params: {
+            id: person.id
+          }
+        }
+      }
+    }, [_vm._v("Edit")])], 1)]);
   }), 0)])]);
 };
 
@@ -72,7 +81,11 @@ var staticRenderFns = [function () {
     attrs: {
       scope: "col"
     }
-  }, [_vm._v("Job")])])]);
+  }, [_vm._v("Job")]), _vm._v(" "), _c("th", {
+    attrs: {
+      scope: "col"
+    }
+  }, [_vm._v("Edit")])])]);
 }];
 render._withStripped = true;
 
